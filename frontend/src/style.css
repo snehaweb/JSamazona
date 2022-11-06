@@ -94,3 +94,16 @@ footer{
 .product-price{
     font-size: 2rem;
 }
+
+.notfound{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.notfound img{
+    
+    width: 60%;
+    height: 550px;
+}
+
