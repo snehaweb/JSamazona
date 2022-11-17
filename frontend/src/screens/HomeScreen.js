@@ -1,9 +1,21 @@
-import data from "../data.js";
+/* eslint-disable no-underscore-dangle */
+import axios from 'axios';
 
 const HomeScreen = {
-    render: () => {
-        const { products } = data;
-        return `
+  render: async () => {
+    const response = await axios({
+      url: 'http://localhost:5000/api/products',
+      headers: {
+        'content-Type': 'application/json',
+      },
+    });
+    if (!response || response.statusText !== 'OK') {
+      return '<div>Error in getting data<div>';
+    }
+
+    const products = response.data;
+
+    return `
         <ul class="products">
             ${products.map((product) => `<li>
                     <div class="product">
@@ -23,10 +35,9 @@ const HomeScreen = {
                             $${product.price}
                         </div>
                     </div>
-                </li>`
-        ).join('\n')}
+                </li>`).join('\n')}
         `;
-    },
+  },
 
 };
 

@@ -3,13 +3,32 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": " node backend/server.js",
+    "start": "nodemon --watch backend --exec babel-node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2"
   },
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snehaweb/JSamazona.git"
+  },
+  "bugs": {
+    "url": "https://github.com/snehaweb/JSamazona/issues"
+  },
+  "homepage": "https://github.com/snehaweb/JSamazona#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.4"
+  }
 }
