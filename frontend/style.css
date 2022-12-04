@@ -92,7 +92,7 @@ footer{
     color: #808080; 
 }
 .product-price{
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .notfound{
@@ -107,3 +107,13 @@ footer{
     height: 550px;
 }
 
+/* /ratings/ */
+.rating{
+    color: #ffc000;
+    font-size: 1.8rem;
+}
+
+.rating span:last-child{
+    color: #444444;
+    font-size: 1.4rem;
+}
