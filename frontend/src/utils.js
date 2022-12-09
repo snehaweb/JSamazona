@@ -16,3 +16,4 @@ export const rerender = async (component) => {
   await component.after_render();
   
 };
+
